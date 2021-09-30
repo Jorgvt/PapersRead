@@ -1,0 +1,11 @@
+- The network is trained such that the squared L2 distannces in the embedding space directly correspond to face similarity
+- FaceNet directly trains its output to be a compact 128-D embedding using a triplet-based loss. The triplets consist of two matching face thumbnaisl and a non-matching face thumbnail, and the loss aims to separate the psitive pair from the negative by a distance margin.
+- Choosing the triplets turns out to be very important for achieving good performance.
+- The triplet loss tries to enforce a margin between each pair of faces from one persno to all other faces. This allows the faces for one identity to live on a manifold, while still enforcing the distance and discriminability to other identities.
+- It's crucial to select hard triplets that can contribute to improving the model.
+- To ensure fast convergence the distance anchor-negative-embedding has to be lower than the anchor-positive-embedding + alpha
+- Triplets can be generated offline (every n steps) or online (selecting from within a mini-batch)
+- They use online generaetion and use large mini-batches.
+- Selecting hardest negatives can lead to bad local minima in practice, resulting in a collappsed model producing all-zero-embeddings.
+- To mitigate this we can select triplets that are withing the alpha range (semi-hard examples).
+- alpha is set to 0.2
