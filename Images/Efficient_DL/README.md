@@ -1,6 +1,3 @@
-# PapersRead
-Repo where I will be storing notes on papers read.
-
 ## Efficient Deep Learning: A Survey on Making Deep Learning Models Smaller, Faster, and Better (2021) [link](https://arxiv.org/abs/2106.08962)
 
 A deep learning practitioner might face the following challenges when training or deploying a model:
@@ -25,7 +22,7 @@ implies that any model that we choose is the best for the tradeoffs that we care
 ### Mental model
 In this section we present the mental model to think about the collection of algorithms, techniques,and tools related to efficient deep learning. We propose to structure them in five major areas, with the first four focused on modeling, and the final one around infrastructure and tools.
 
-![Mental Model](Images/Efficient_DL/Mental_Model.png)
+![Mental Model](Mental_Model.png)
 
 ### Landscape of Efficient Deep Learning
 #### Compression Techniques
